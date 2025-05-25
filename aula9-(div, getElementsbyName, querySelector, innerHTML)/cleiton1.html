@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo DOM na pratica!</title>
+    <style>
+        body {
+            background: rgb(45, 209, 211);
+            color: white;
+            font: normal 18pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeiro exercicio sozinho!</h1>
+    <p>coloca em pratica</p>
+    <p>Primeiro passo</p>
+    <div class="msg">Clique aqui!</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var d = window.document.querySelector('div.msg')
+        p1.style.color = 'red'
+        d.style.color = 'green'
+
+    </script>
+</body>
+</html>

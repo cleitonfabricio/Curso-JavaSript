@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Número</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background: rgb(49, 130, 177);  /* cor do fundo */
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 80px; /* largura */
+        }
+        div#res {
+            margin-top: 20px; /* espaço da margen */
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> + <!--cria um bloco para meu núnero digitado-->
+    <input type="number" name="txtn2" id="txtn2"> <!--cria um bloco para meu número digitado-->
+    <input type="button" value="Somar" onclick="somar()"> <!--cria um bloco para 'Somar'-->
+    <div id="res">Resultado</div> <!--me da o resultdo da soma dos números digitado dentro do 'txtn1 + txtn2 = somar'-->
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1') //pega tudo dentro do input = txtn1//
+            var tn2 = window.document.querySelector('input#txtn2') //pega tudo dentro do input = txtn2//
+            var res = window.document.getElementById('res') //pega o resultado dentro do input = Somar//
+            var n1 = Number(tn1.value) //vai guarda o valor digitado dentro input = txtn1//
+            var n2 = Number(tn2.value) //vai guarda o valor digitado dentro input = txtn2//
+            var s = n1 + n2 // somar o valor guardado dentro txtn1 + txtn2//
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>!` //me da o resultado da somar //
+        }
+    </script>
+</body>
+</html>

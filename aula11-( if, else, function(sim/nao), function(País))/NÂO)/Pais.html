@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background: rgb(212, 80, 50);
+        }
+        input {
+            width: 100px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de viagem?</h1>
+    Olá, Você e de qual País? <input type="text" name="txt" id="txt">
+    <input type="button" value="Verificar" onclick="Respotar()">
+    <div id="res"></div>
+
+    <script>
+        function Respotar() {
+            var txt = document.querySelector('input#txt')
+            var res = document.querySelector('div#res')
+            var tx = txt.value
+            res.innerHTML = `<p>Olá, passageiro do <strong>${tx}</strong>!</p>`
+            if (tx != 'Brasil') {
+                res.innerHTML += `<p>Veja bem vindo estrangeiro!</p>`
+            } else {
+                res.innerHTML += `<p>Veja bem vindo <strong>Brasileiro</strong>!</p>`
+            }
+            res.innerHTML += `<p>Correu tudo bem na sua viagem!</p>`
+        }
+
+    </script>
+</body>
+</html>

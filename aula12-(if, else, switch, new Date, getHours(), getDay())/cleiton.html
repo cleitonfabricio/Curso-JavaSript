@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Condição Múltipla</title>
+</head>
+<body>
+    <h1>Olá, aluno!</h1>
+     Tudo bem,
+    <input type="text" id="txt" name="txt">
+    <input type="button" value="Respotar" onclick="Respotar()">
+    <div id="res"></div>
+    <script>
+        function Respotars() {
+            var txt = document.querySelector('input#txt')
+            var res = document.querySelector('div#res')
+            var agora = new Date()
+            var h = agora.getHours()
+            res.innerHTML += (`<p>Agora são extamente ${h} horas.</p>`)
+                if (h < 12) {
+            res.innerHTML += ('Bom dia!')
+                } else if (h <= 18) {
+            res.innerHTML += ('Boa tarde!')
+                } else {
+            res.innerHTML += ('Boa noite!')
+                }
+        }
+    </script>
+</body>
+</html>

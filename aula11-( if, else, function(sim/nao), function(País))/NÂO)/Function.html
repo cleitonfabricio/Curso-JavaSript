@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja bem vindo!</title>
+    <style>
+        body {
+            font: normal 17pt Arial;
+            background: rgb(40, 239, 246);
+        }
+        input {
+            width: 50px;
+            height: 28px;
+        }
+        div#resp {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, pessoal!</h1>
+    Você estão vindo de outro do País?
+    <input type="button" value="Sim" onclick="Sim()" id="Sim">
+    <input type="button" value="Não" onclick="Não()" id="Não">
+    <div id="res">Respotar</div>
+
+    <script>
+        function Sim() {
+            var s = window.document.querySelector('input#Sim')
+            var res = window.document.querySelector('div#res')
+            var r = ('Sim')
+            res.innerHTML = `${r}! Seja bem vindo <strong>estrangeiro</strong>!`
+        }
+        function Não() {
+            var n = window.document.querySelector('input#Não')
+            var res = document.querySelector('div#res')
+            var r = ('Não')
+            res.innerHTML = `${r}! Seja bem vindo <strong>Brasileiro</strong>!`
+        }
+    </script>
+</body>
+</html>

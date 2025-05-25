@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(59, 160, 242) ;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resulado</p>
+    <p>Aprendedo a usa <estrong>DOM</estrong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]//selecio o paragrafo
+        /*var d = window.document.getElementById('msg')*/
+        var d = window.document.querySelector('div#msg')// query funciona com "." ou sem "."
+        d.style.color = 'red'
+        p1.style.color = 'green'
+
+        /* window.document.write(window.document.URL)// pode inseri qual elementos que voçê quer
+
+        /*corpo.style.background = ''
+        p1.style.color = 'blue' */
+        /*d.style.color = 'green' // innerText sair igual o texto sem (cor e negrito)
+        /*d.innerText = 'Olá, mundo' //esceve modificação do (DIV 'Clique em mim')
+
+        document.write(p1.innerText) // innerHTML sair igual o texto com (cor e negrito)*/
+
+    </script>
+</body>
+</html>
